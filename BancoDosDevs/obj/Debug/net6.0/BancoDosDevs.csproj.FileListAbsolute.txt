@@ -1,0 +1,15 @@
+C:\ProjetoBancoDosDevs\BancoDosDevs\obj\Debug\net6.0\BancoDosDevs.csproj.AssemblyReference.cache
+C:\ProjetoBancoDosDevs\BancoDosDevs\obj\Debug\net6.0\BancoDosDevs.GeneratedMSBuildEditorConfig.editorconfig
+C:\ProjetoBancoDosDevs\BancoDosDevs\obj\Debug\net6.0\BancoDosDevs.AssemblyInfoInputs.cache
+C:\ProjetoBancoDosDevs\BancoDosDevs\obj\Debug\net6.0\BancoDosDevs.AssemblyInfo.cs
+C:\ProjetoBancoDosDevs\BancoDosDevs\obj\Debug\net6.0\BancoDosDevs.csproj.CoreCompileInputs.cache
+C:\ProjetoBancoDosDevs\BancoDosDevs\bin\Debug\net6.0\BancoDosDevs.exe
+C:\ProjetoBancoDosDevs\BancoDosDevs\bin\Debug\net6.0\BancoDosDevs.deps.json
+C:\ProjetoBancoDosDevs\BancoDosDevs\bin\Debug\net6.0\BancoDosDevs.runtimeconfig.json
+C:\ProjetoBancoDosDevs\BancoDosDevs\bin\Debug\net6.0\BancoDosDevs.dll
+C:\ProjetoBancoDosDevs\BancoDosDevs\bin\Debug\net6.0\BancoDosDevs.pdb
+C:\ProjetoBancoDosDevs\BancoDosDevs\obj\Debug\net6.0\BancoDosDevs.dll
+C:\ProjetoBancoDosDevs\BancoDosDevs\obj\Debug\net6.0\refint\BancoDosDevs.dll
+C:\ProjetoBancoDosDevs\BancoDosDevs\obj\Debug\net6.0\BancoDosDevs.pdb
+C:\ProjetoBancoDosDevs\BancoDosDevs\obj\Debug\net6.0\BancoDosDevs.genruntimeconfig.cache
+C:\ProjetoBancoDosDevs\BancoDosDevs\obj\Debug\net6.0\ref\BancoDosDevs.dll
