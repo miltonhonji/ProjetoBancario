@@ -1,10 +1,9 @@
 namespace BancoDosDevs.Business.Contract
 {
-    public interface IBaseRepository <DEntity>
+    public interface IBaseRepository <BEntity>
     {
         void Delete(int id);
-        void Save(DEntity Entity);
+        void Save(BEntity Entity);
         void Update(int id);
-        List<DEntity> GetAll();
     }
 }
