@@ -7,5 +7,6 @@ namespace BancoDosDevs.Business.Contract
         void DepositOperation();
         void TransferOperation();
         void WithdrawOperation();
+        List<OEntity> GetExtract();
     }
 }
