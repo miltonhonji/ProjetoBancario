@@ -1,7 +1,11 @@
+using System;
+using BancoDosDevs.Model;
+using BancoDosDevs.Business.Contract;
+
 namespace BancoDosDevs.Business.Contract
 {
-    public class ISavingsAccountRepository : IBaseOperationRepository<SavingsAccount>
+    public interface ISavingsAccountRepository : IBaseOperationRepository<SavingsAccount>
     {
-        void TransferToOtherBankAccount();
+        void TransferToOtherBankAccount(SavingsAccount savingsAccount);
     }
 }
