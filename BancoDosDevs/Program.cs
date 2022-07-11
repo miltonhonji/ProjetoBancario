@@ -13,23 +13,30 @@ namespace BancoDosDevs
 
         public static void Menu()
         {
-            Console.Clear();
-            Console.WriteLine("Bem vindo ao Bando dos Dev´s");
-            Console.WriteLine();
-            Console.WriteLine("1 - Conta Corrente");
-            Console.WriteLine("2 - Conta Poupança");
-            Console.WriteLine("3 - Conta Investimento");
-            Console.WriteLine();
-            
-            Console.WriteLine("Insira uma opção: ");
-            int optionChoosed = int.Parse(Console.ReadLine());
-
-            switch (optionChoosed)
+            try
             {
-                case 1: CurrentAccountOptions(); break;
-            }
+                Console.Clear();
+                Console.WriteLine("Bem vindo ao Bando dos Dev´s");
+                Console.WriteLine();
+                Console.WriteLine("1 - Conta Corrente");
+                Console.WriteLine("2 - Conta Poupança");
+                Console.WriteLine("3 - Conta Investimento");
+                Console.WriteLine();
+            
+                Console.WriteLine("Insira uma opção: ");
+                int optionChoosed = int.Parse(Console.ReadLine());
+
+                switch (optionChoosed)
+                {
+                    case 1: CurrentAccountOptions(); break;
+                }
                  
-            Console.ReadKey();
+                Console.ReadKey();
+            }
+            catch (System.Exception ex)
+            {
+                 Console.WriteLine(ex.Message);
+            }
         }
 
         public static void CurrentAccountOptions()
