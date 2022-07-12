@@ -61,6 +61,7 @@ namespace BancoDosDevs
             switch (currentAccountOption)
             {
                 case 1: currentAccountRepository.DepositOperation(); break;
+                case 4: currentAccountRepository.WithdrawOperation(); break;
                 default: System.Environment.Exit(1); break;
             }
                     

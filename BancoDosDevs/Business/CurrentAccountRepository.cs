@@ -105,7 +105,34 @@ namespace BancoDosDevs.Business
 
         public void WithdrawOperation()
         {
-            //Model.
+            Model.CurrentAccount currentAccount = new Model.CurrentAccount();
+            
+            currentAccount.Agency = 1207;
+            currentAccount.AccountNumber = "180386-6";
+            currentAccount.BankCode = 36;
+            var nameCustomer = "Milton Honji";
+
+            try
+            {
+                Console.Clear();
+
+                Console.WriteLine($"Olá { nameCustomer } ");
+                Console.WriteLine($"Número da Agência: { currentAccount.Agency }");
+                Console.WriteLine($"Número da Conta: { currentAccount.AccountNumber }");
+                Console.WriteLine($"Você está na agência com o código: { currentAccount.BankCode }");
+                
+                Console.WriteLine();
+                Console.WriteLine("Conta Corrente - Opção Saque");
+                Console.WriteLine();
+                Console.WriteLine("Digite o valor para o saque");
+                int withDrawValue = int.Parse(Console.ReadLine());
+
+                Console.ReadKey();
+            }
+            catch (Exception ex)
+            {
+                 Console.WriteLine(ex.Message);
+            }
         }
     }
 }
