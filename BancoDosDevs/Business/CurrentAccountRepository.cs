@@ -111,6 +111,7 @@ namespace BancoDosDevs.Business
             currentAccount.AccountNumber = "180386-6";
             currentAccount.BankCode = 36;
             var nameCustomer = "Milton Honji";
+            decimal balanceValue = 15000m;
 
             try
             {
@@ -125,8 +126,40 @@ namespace BancoDosDevs.Business
                 Console.WriteLine("Conta Corrente - Opção Saque");
                 Console.WriteLine();
                 Console.WriteLine("Digite o valor para o saque");
-                int withDrawValue = int.Parse(Console.ReadLine());
+                decimal withDrawValue = decimal.Parse(Console.ReadLine());
 
+                if(withDrawValue <= balanceValue)
+                {
+                    balanceValue -= withDrawValue;
+                    Console.WriteLine("Aguarde conta as notas");
+                    Thread.Sleep(2000);
+                    
+                    Console.Clear();
+                    Console.WriteLine("Operação realizada com sucesso");
+                    Console.ReadKey();
+                    
+                    Console.Clear();
+                    Console.WriteLine("Deseja fazer uma outra operação: ");
+                    int otherOperation = int.Parse(Console.ReadLine());
+
+                    switch (otherOperation)
+                            {
+                                case 1: 
+                                    Console.Clear();
+                                    Program.Menu(); 
+                                break;
+                                case 2: 
+                                    Console.Clear();
+                                    Console.WriteLine("Obrigado por usar os nossos Serviços");
+                                    System.Environment.Exit(1);
+                                break;
+                            }
+                            Console.ReadKey();
+                }
+                else if(withDrawValue > balanceValue)
+                {
+                    Console.WriteLine("Você não tem saldo suficiente para sacar. Verifique sua conta");
+                }
                 Console.ReadKey();
             }
             catch (Exception ex)
