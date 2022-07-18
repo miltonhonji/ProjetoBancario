@@ -41,6 +41,7 @@ namespace BancoDosDevs
 
         public static void CurrentAccountOptions()
         {
+            var bankCode = String.Empty;
             Business.CurrentAccountRepository currentAccountRepository = new Business.CurrentAccountRepository();
             
             Console.Clear();
@@ -61,6 +62,7 @@ namespace BancoDosDevs
             switch (currentAccountOption)
             {
                 case 1: currentAccountRepository.DepositOperation(); break;
+                case 2: currentAccountRepository.TakeOutInsurance(bankCode); break;
                 case 4: currentAccountRepository.WithdrawOperation(); break;
                 case 5: currentAccountRepository.TransferOperation(); break;
                 default: System.Environment.Exit(1); break;

@@ -76,10 +76,8 @@ namespace BancoDosDevs.Business
                             }
                             Console.ReadKey();
                         }
-
                     break;
-                }
-            
+                }           
                 Console.ReadKey();
             }
             catch (Exception ex)
@@ -95,7 +93,34 @@ namespace BancoDosDevs.Business
 
         public void TakeOutInsurance(string bankCode)
         {
-            throw new NotImplementedException();
+            Model.CurrentAccount currentAccount = new Model.CurrentAccount();
+            
+            currentAccount.Agency = 1207;
+            currentAccount.AccountNumber = "180386-6";
+            bankCode = "36";
+            var nameCustomer = "Milton Honji";
+            decimal balanceValue = 15000m;
+
+            try
+            {
+                Console.Clear();
+                Console.WriteLine($"Olá { nameCustomer }");
+                Console.WriteLine($"Número da Agência: { currentAccount.Agency }");
+                Console.WriteLine($"Número da Conta: { currentAccount.AccountNumber }");
+                Console.WriteLine($"Você está na agência com o código: { currentAccount.BankCode }");
+
+                Console.Clear();
+                Console.WriteLine("Conta Corrente - Opção Fazer Seguro");
+                Console.WriteLine();
+                Console.WriteLine("Para fazer o seguro vamos confirmar algumas informações? ");
+                Console.WriteLine("1 - Sim");
+                Console.WriteLine("2 - Não");
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
 
         public void TransferOperation()
