@@ -184,7 +184,7 @@ namespace BancoDosDevs.Business
                         System.Environment.Exit(1);
                         break;
                 }
-                Console.ReadKey();
+                    Console.ReadKey();
             }
             catch (Exception ex)
             {
