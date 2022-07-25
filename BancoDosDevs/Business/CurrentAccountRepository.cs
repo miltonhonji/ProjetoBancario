@@ -88,7 +88,19 @@ namespace BancoDosDevs.Business
 
         public List<CurrentAccount> GetExtract()
         {
-            throw new NotImplementedException();
+            List<CurrentAccount> currentAccountList = new List<CurrentAccount>();
+            
+            CurrentAccount currentAccountFirstItem = new CurrentAccount();
+            currentAccountFirstItem.BankCode = 36;
+            currentAccountFirstItem.Agency = 2507;
+            currentAccountFirstItem.AccountNumber = "18031986-06";
+
+            currentAccountList.Add(currentAccountFirstItem);
+
+            foreach(CurrentAccount currentAccount in currentAccountList)
+            {
+                Console.WriteLine(currentAccount.BankCode);
+            }
         }
 
         public void TakeOutInsurance(string bankCode)
@@ -109,13 +121,40 @@ namespace BancoDosDevs.Business
                 Console.WriteLine($"Número da Conta: { currentAccount.AccountNumber }");
                 Console.WriteLine($"Você está na agência com o código: { currentAccount.BankCode }");
 
-                Console.Clear();
+                Console.WriteLine();
                 Console.WriteLine("Conta Corrente - Opção Fazer Seguro");
                 Console.WriteLine();
                 Console.WriteLine("Para fazer o seguro vamos confirmar algumas informações? ");
                 Console.WriteLine("1 - Sim");
                 Console.WriteLine("2 - Não");
+                int takeOutInsuranceChoosed = int.Parse(Console.ReadLine());
 
+                if(takeOutInsuranceChoosed.Equals(1))
+                {
+                    Console.Clear();
+                    Console.WriteLine("Qual tipo de seguro você deseja fazer ?");
+                    Console.WriteLine("1 - Seguro para Cartão Protegido");
+                    Console.WriteLine("2 - Seguro de Auto");
+                    Console.WriteLine("3 - Seguro de Vida");
+                    int takeOutInsuranceOption = int.Parse(Console.ReadLine());
+                    
+                }
+                else if(takeOutInsuranceChoosed.Equals(2))
+                {
+                    Console.Clear();
+                    Console.WriteLine("Operação Não realizada!");
+                    Console.WriteLine("Deseja retornar ao menu?");
+                    Console.WriteLine("1 - Sim");
+                    Console.WriteLine("2 - Não");
+                    int optionChoosed = int.Parse(Console.ReadLine());
+
+                    switch(optionChoosed)
+                    {
+                        case 1: Program.Menu(); break;
+                        case 2: System.Environment.Exit(1); break;
+                    }
+                }
+                Console.ReadKey();
             }
             catch (Exception ex)
             {

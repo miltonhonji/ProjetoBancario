@@ -63,8 +63,10 @@ namespace BancoDosDevs
             {
                 case 1: currentAccountRepository.DepositOperation(); break;
                 case 2: currentAccountRepository.TakeOutInsurance(bankCode); break;
+                case 3: currentAccountRepository.GetExtract(); break;
                 case 4: currentAccountRepository.WithdrawOperation(); break;
                 case 5: currentAccountRepository.TransferOperation(); break;
+                case 6: Menu(); break;
                 default: System.Environment.Exit(1); break;
             }
                     
