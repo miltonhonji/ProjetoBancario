@@ -2,6 +2,7 @@ using System;
 using System.Globalization;
 using BancoDosDevs.Model;
 using BancoDosDevs.Business.Contract;
+using System.Collections.Generic;
 
 namespace BancoDosDevs.Business
 {
@@ -85,22 +86,35 @@ namespace BancoDosDevs.Business
                  Console.WriteLine(ex.Message);
             }                
         }
-
+    
         public List<CurrentAccount> GetExtract()
         {
-            List<CurrentAccount> currentAccountList = new List<CurrentAccount>();
-            
-            CurrentAccount currentAccountFirstItem = new CurrentAccount();
-            currentAccountFirstItem.BankCode = 36;
-            currentAccountFirstItem.Agency = 2507;
-            currentAccountFirstItem.AccountNumber = "18031986-06";
+            List<CurrentAccount> extractCurrentAccount = new List<CurrentAccount>();
 
-            currentAccountList.Add(currentAccountFirstItem);
+            extractCurrentAccount.Add(new CurrentAccount(306, "1121-5", 36));
+            extractCurrentAccount.Add(new CurrentAccount(307, "1803-5", 37));
 
-            foreach(CurrentAccount currentAccount in currentAccountList)
-            {
-                Console.WriteLine(currentAccount.BankCode);
+            Console.WriteLine("Tela de Extrato - Conta Corrente");
+
+            foreach (CurrentAccount currentAccountCollection in  extractCurrentAccount)
+            {   
+                string completeExtract = $"Agência: { currentAccountCollection.Agency } - "; 
+                completeExtract += $"Número da Conta: { currentAccountCollection.AccountNumber } - ";
+                completeExtract += $"Código do Banco: { currentAccountCollection.BankCode}. ";
+
+                Console.WriteLine(completeExtract);
             }
+
+            Console.ReadKey();
+
+            Console.Clear();
+            Console.WriteLine("Deseja retornar ao menu? ");
+            Console.WriteLine("1 - Sim");
+            Console.WriteLine("2 - Não");
+
+            //Console.WriteLine()
+
+            return extractCurrentAccount;
         }
 
         public void TakeOutInsurance(string bankCode)
