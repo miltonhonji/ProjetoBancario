@@ -29,6 +29,7 @@ namespace BancoDosDevs
                 switch (optionChoosed)
                 {
                     case 1: CurrentAccountOptions(); break;
+                    case 2: SavingsAccountOptions(); break;
                 }
                  
                 Console.ReadKey();
@@ -71,6 +72,16 @@ namespace BancoDosDevs
             }
                     
             Console.ReadKey();
+        }
+
+        public static void SavingsAccountOptions()
+        {
+            Business.SavingsAccountRepository savingsAccountRepository = new Business.SavingsAccountRepository();
+            
+            Console.Clear();
+            Console.WriteLine("**** Banco dos Dev´s - Conta Poupança ****");
+            Console.WriteLine();
+
         }
     }
 }
