@@ -8,7 +8,23 @@ namespace BancoDosDevs.Business
     {
         public void DepositOperation()
         {
-            throw new NotImplementedException();
+            try
+            {
+                Model.SavingsAccount savingsAccount = new Model.SavingsAccount();
+                Model.SavingsAccount destinationAccount = new Model.SavingsAccount();
+
+                Console.Clear();
+
+                Console.WriteLine("Conta Poupança - Opção Depósito");
+                Console.WriteLine();
+
+                Console.WriteLine("Digite o Número da Agência");
+                savingsAccount.Agency = int.Parse(Console.ReadLine());
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
 
         public List<SavingsAccount> GetExtract()

@@ -81,7 +81,21 @@ namespace BancoDosDevs
             Console.Clear();
             Console.WriteLine("**** Banco dos Dev´s - Conta Poupança ****");
             Console.WriteLine();
+            Console.WriteLine("1 - Depósito");
+            Console.WriteLine("2 - Obter Extrato");
+            Console.WriteLine("3 - Sacar");
+            Console.WriteLine("4 - Transferir");
+            Console.WriteLine("5 - Transferir para outro banco");
+            Console.WriteLine("6 - Menu");
+            Console.WriteLine("0 - Sair");
 
+            Console.WriteLine("Escolha uma opção: ");
+            int savingsAccountOption = int.Parse(Console.ReadLine());
+
+            switch(savingsAccountOption)
+            {
+                case 1: savingsAccountRepository.DepositOperation(); break;
+            }
         }
     }
 }
