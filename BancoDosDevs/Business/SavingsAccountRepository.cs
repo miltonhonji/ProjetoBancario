@@ -1,6 +1,7 @@
 using System;
 using BancoDosDevs.Model;
 using BancoDosDevs.Business.Contract;
+using System.Globalization;
 
 namespace BancoDosDevs.Business
 {
@@ -18,8 +19,47 @@ namespace BancoDosDevs.Business
                 Console.WriteLine("Conta Poupança - Opção Depósito");
                 Console.WriteLine();
 
-                Console.WriteLine("Digite o Número da Agência");
+                Console.WriteLine("Digite o Número da Agência: ");
                 savingsAccount.Agency = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("Digite o Número da Conta: ");
+                savingsAccount.AccountNumber = Console.ReadLine();
+
+                Console.WriteLine("Digite o valor para o depósito: ");
+                var depositAmount = decimal.Parse(Console.ReadLine());
+
+                Console.ReadKey();
+
+                Console.Clear();
+                Console.WriteLine("Dados para o Depósito");
+                Console.WriteLine();
+                Console.WriteLine($"Número da Agência: { destinationAccount.Agency }");
+                Console.WriteLine($"Número da Conta: { destinationAccount.AccountNumber }");
+                Console.WriteLine($"Valor para Depósito: { depositAmount.ToString("C", CultureInfo.CreateSpecificCulture("pt-br")) }");
+
+                Console.WriteLine();
+                Console.WriteLine("Deseja confirmar o depósito: ");
+                Console.WriteLine("1 - Sim");
+                Console.WriteLine("2 - Não");
+                int depositConfirm = int.Parse(Console.ReadLine());
+
+                switch(depositConfirm)
+                {
+                    case 1:
+                        int initialDepositTime = 0;
+                        int finalDepositTime = 10;
+                        Console.Clear();
+                        Console.WriteLine("Insira o seu envelope preenchido");
+
+                        /*while(finalDepositTime >= initialDepositTime)
+                        {
+                            initialDepositTime += initialDepositTime + 1;
+                            Console.WriteLine("")
+                        }*/
+
+                    break;
+                }
+
             }
             catch (Exception ex)
             {
